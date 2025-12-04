@@ -30,11 +30,8 @@ public class Palindromes {
   public boolean isPalindromeIgnoreSpaces(String phrase) {
 
       phrase = phrase.replace(" ", "");
-
-      StringBuilder p1 = new StringBuilder(phrase);
-      p1.reverse();
-      phrase = phrase.toLowerCase();
-      return p1.toString().toLowerCase().equals(phrase);
+      StringBuilder p1 = new StringBuilder(phrase).reverse();
+      return p1.toString().equalsIgnoreCase(phrase);
 
   }
 
